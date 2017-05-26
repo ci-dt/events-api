@@ -30,16 +30,19 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.1.1</version>
+
 				<configuration>
-					<deploymentType>arm</deploymentType>
+					<deploymentType>cloudhub</deploymentType>
+					<!-- muleVersion is the runtime version as it appears on the CloudHub 
+						interface -->
+					<muleVersion>3.8.4</muleVersion>
 					<username>digital-twin</username>
 					<password>digital-TWIN1</password>
-					<target>digital-twin-example</target>
-					<!-- One of: server, serverGroup, cluster -->
-					<targetType>server</targetType>
+					<redeploy>true</redeploy>
 					<environment>Production</environment>
-					<applicationName>events-api</applicationName>
+
 				</configuration>
+
 				<executions>
 					<execution>
 						<id>deploy</id>
