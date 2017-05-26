@@ -2,10 +2,6 @@ dependencies:
   override:
     - mvn -s .circleci.settings.xml -DskipTests clean install
 
-test:
-  override:
-    - mvn -o surefire:test
-
 deployment:
   main:
     branch: master
