@@ -33,14 +33,12 @@
 
 				<configuration>
 					<deploymentType>cloudhub</deploymentType>
-					<!-- muleVersion is the runtime version as it appears on the CloudHub 
-						interface -->
 					<muleVersion>3.8.4</muleVersion>
-					<username>digital-twin</username>
-					<password>digital-TWIN1</password>
+					<username>${env.ANYPOINT_USER}</username>
+					<password>${env.ANYPOINT_PASS}</password>
 					<redeploy>true</redeploy>
 					<environment>Production</environment>
-
+					<workerType>Micro</workerType>
 				</configuration>
 
 				<executions>
