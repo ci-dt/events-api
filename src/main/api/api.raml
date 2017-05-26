@@ -1,0 +1,25 @@
+#%RAML 0.8
+title: Events API
+version: 1.0
+
+/events:
+  post:
+    body:
+      application/json:
+        example: |
+          {
+            "123" : "Event Payload"
+          }
+    responses: 
+      202:
+  get:
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: |
+              {
+                "122" : "Event Payload",
+                "123" : "Event Payload",
+                "124" : "Event Payload"
+              }
