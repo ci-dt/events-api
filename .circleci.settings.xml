@@ -9,16 +9,13 @@
 			<password>${env.MULE_PASS}</password>
 		</server>
 	</servers>
+	
 	<profiles>
 		<profile>
 			<id>Mule</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-			<properties>
-				<platform.client.id>${env.PLAT_CLIENTID}</platform.client.id>
-				<platform.client.secret>${env.PLAT_CLIENTSECRET}</platform.client.secret>
-			</properties>
 			<repositories>
 				<repository>
 					<id>MuleRepository</id>
@@ -34,11 +31,5 @@
 				</repository>
 			</repositories>
 		</profile>
-
-
-
-
 	</profiles>
-
-
 </settings>

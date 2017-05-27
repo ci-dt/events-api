@@ -41,18 +41,6 @@
 					<workerType>Micro</workerType>
 					<applicationName>events-sapi-deb</applicationName>
 				</configuration>
-				<goals>
-					<project>
-						<build>
-							<resources>
-								<resource>
-									<directory>src/main/app</directory>
-									<filtering>true</filtering>
-								</resource>
-							</resources>
-						</build>
-					</project>
-				</goals>
 				<executions>
 					<execution>
 						<id>deploy</id>
@@ -210,5 +198,4 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
 </project>
