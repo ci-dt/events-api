@@ -201,6 +201,13 @@
             <name>MuleEE Releases Repository</name>
             <url>https://repository-master.mulesoft.org/nexus/content/repositories/releases-ee/</url>
         </repository>
+        
+        <repository>
+            <id>anno-mojo</id>
+            <name>Maven Plugin Tools Anno</name>
+            <url>http://jcenter.bintray.com/org/jfrog/maven/annomojo/maven-plugin-tools-anno/</url>
+        </repository>
+        
     </repositories>
 	<pluginRepositories>
 		<pluginRepository>
