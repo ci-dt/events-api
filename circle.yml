@@ -1,6 +1,6 @@
 dependencies:
   override:
-    - mvn -s .circleci.settings.xml -DskipTests clean install dependency:resolve-plugins dependency:go-offline
+    - mvn -s .circleci.settings.xml -DskipTests clean install
 
 test:
   override:
