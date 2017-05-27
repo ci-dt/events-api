@@ -15,6 +15,10 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+			<properties>
+				<platform.client.id>${env.PLAT_CLIENTID}</platform.client>
+				<platform.client.secret>${env.PLAT_CLIENTSECRET}</platform.client.secret>
+			</properties>
 			<repositories>
 				<repository>
 					<id>MuleRepository</id>
@@ -30,6 +34,10 @@
 				</repository>
 			</repositories>
 		</profile>
+
+
+
+
 	</profiles>
 
 
