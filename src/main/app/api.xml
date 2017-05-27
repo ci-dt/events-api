@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/mongo http://www.mulesoft.org/schema/mule/mo
     <http:listener-config name="api-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <apikit:config name="api-config" raml="api.raml" consoleEnabled="false" doc:name="Router"/>
     <api-platform-gw:api apiName="Events API" version="1.0" flowRef="api-main" create="true" apikitRef="api-config" doc:name="API Autodiscovery"/>
-    <mongo:config name="Mongo_DB" username="deb" password="deb" database="deb" host="ds151661.mlab.com:51661" port="51661" doc:name="Mongo DB" />
+    <mongo:config name="Mongo_DB" username="deb" password="deb" database="deb" host="ds151661.mlab.com:51661" doc:name="Mongo DB" />
     <flow name="api-main">
         <http:listener config-ref="api-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
         <apikit:router config-ref="api-config" doc:name="APIkit Router"/>
