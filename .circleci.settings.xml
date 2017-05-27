@@ -16,7 +16,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<platform.client.id>${env.PLAT_CLIENTID}</platform.client>
+				<platform.client.id>${env.PLAT_CLIENTID}</platform.client.id>
 				<platform.client.secret>${env.PLAT_CLIENTSECRET}</platform.client.secret>
 			</properties>
 			<repositories>
