@@ -41,7 +41,7 @@
 					<workerType>Micro</workerType>
 					<applicationName>events-sapi-deb</applicationName>
 					<properties>
-						<mykey>@notfromcircle@</mykey>
+						<mykey>${env.FROMCI}</mykey>
 					</properties>
 				</configuration>
 				<executions>
