@@ -1,4 +1,5 @@
 #%RAML 0.8
+baseUri: http://events-sapi-deb.cloudhub.io/api
 title: Events API
 version: 1.0
 
@@ -6,10 +7,7 @@ version: 1.0
   post:
     body:
       application/json:
-        example: |
-          {
-            "123" : "Event Payload"
-          }
+        example: !include component-scanned-event-example.json
     responses: 
       202:
   get:

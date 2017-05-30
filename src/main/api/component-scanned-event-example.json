@@ -1,0 +1,22 @@
+{
+ "_id" : "3318c11e-fe60-4c80-a2b2-7add681492d9",
+ "type": "component-scanned",
+ "data": {
+  "meta" : {
+   "creation_date": "ISODate('2017-05-30T15:32:01Z')",
+   "source": "ScannerExperienceAPI",
+   "correlation_id": "a-correlation-id"
+  },
+  "payload" : {
+   "user_gid": "ZZZEIEIJD",
+    "component":{ 
+      "componentId" : "AKJDLKSJDA",
+      "gpsLocation" : {
+        "latitude" : 40.741895,
+        "longitude" : -73.989308
+        }
+      },
+   "scan_date": "ISODate('2014-21-11T00:00:00Z')"
+  }
+ }
+}
