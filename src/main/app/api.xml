@@ -20,6 +20,7 @@ http://www.mulesoft.org/schema/mule/mongo http://www.mulesoft.org/schema/mule/mo
     </flow>
     <flow name="get:/events:api-config">
         <mongo:find-documents config-ref="Mongo_DB" collection="events" doc:name="Mongo DB"/>
+        <logger level="INFO" doc:name="Logger"/>
     </flow>
     <flow name="post:/events:api-config">
         <mongo:insert-document config-ref="Mongo_DB" collection="events" doc:name="Mongo DB"/>
