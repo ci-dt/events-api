@@ -30,7 +30,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 %output application/json
 ---
 {
-	"122": payload.message.payloadAsString default "no payload",
+	"122": payload as :string default "no payload",
 	"123": "APM tracked message",
 	"124": flowVars.mongo default "no mongo result"
 }]]></dw:set-payload>
