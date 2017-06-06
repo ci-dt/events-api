@@ -24,7 +24,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     <flow name="get:/events:api-config">
         <mongo:find-documents config-ref="Mongo_DB" collection="events" doc:name="Mongo DB"/>
         <set-variable variableName="mongo" value="#[payload]" doc:name="Variable"/>
-        <partner-manager:track-document config-ref="Partner_Manager__Basic_Configuration" direction="INBOUND" doc:name="Partner Manager"/>
+        <partner-manager:track-document config-ref="Partner_Manager__Basic_Configuration" direction="INBOUND" doc:name="Partner Manager" partnerIdentifier="#[123456789]"/>
         <dw:transform-message doc:name="Transform Message">
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/json
