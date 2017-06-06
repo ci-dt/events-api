@@ -30,7 +30,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 ---
 {
 	"122": payload.message.payloadAsString,
-	"123": payload.messageSourceURI as :string,
+	"123": "APM tracked message",
 	"124": payload.processingTime.accumulator as :string
 }]]></dw:set-payload>
         </dw:transform-message>
