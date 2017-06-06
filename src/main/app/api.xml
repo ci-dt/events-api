@@ -23,15 +23,16 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     </flow>
     <flow name="get:/events:api-config">
         <mongo:find-documents config-ref="Mongo_DB" collection="events" doc:name="Mongo DB"/>
+        <set-variable variableName="mongo" value="#[payload]" doc:name="Variable"/>
         <partner-manager:track-document config-ref="Partner_Manager__Basic_Configuration" direction="INBOUND" doc:name="Partner Manager"/>
         <dw:transform-message doc:name="Transform Message">
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/json
 ---
 {
-	"122": payload.message.payloadAsString,
+	"122": "B2B: " ++ payload.message.payloadAsString,
 	"123": "APM tracked message",
-	"124": payload.processingTime.accumulator as :string
+	"124": "Mongo: " ++ flowVars.mongo
 }]]></dw:set-payload>
         </dw:transform-message>
         <logger level="INFO" doc:name="Logger" message="from b2b connector  #[payload]"/>
