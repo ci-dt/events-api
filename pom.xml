@@ -39,6 +39,7 @@
 					<environment>Production</environment>
 					<workerType>Micro</workerType>
 					<applicationName>events-sapi-deb</applicationName>
+					<region>eu-central-1</region>
 					<properties>
 						<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
 						<anypoint.platform.platform_base_uri>https://anypoint.mulesoft.com/apiplatform</anypoint.platform.platform_base_uri>
