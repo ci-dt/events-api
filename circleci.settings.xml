@@ -16,6 +16,7 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+
 			<repositories>
 				<repository>
 					<id>MuleRepository</id>
@@ -30,6 +31,7 @@
 					</snapshots>
 				</repository>
 			</repositories>
+
 		</profile>
 	</profiles>
 </settings>

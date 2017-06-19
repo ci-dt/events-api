@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mulesoft.poc.deb</groupId>
@@ -55,6 +56,7 @@
 						<phase>deploy</phase>
 						<goals>
 							<goal>deploy</goal>
+
 						</goals>
 					</execution>
 				</executions>
@@ -190,30 +192,30 @@
 			<artifactId>mule-module-mongo</artifactId>
 			<version>4.2.0</version>
 		</dependency>
-	<dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-spring-config</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    <dependency>
-            <groupId>com.modus</groupId>
-            <artifactId>mule-connector-partner-manager</artifactId>
-            <version>6.1.0</version>
-        </dependency>
-    <dependency>
-            <groupId>com.mulesoft.weave</groupId>
-            <artifactId>mule-plugin-weave</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    <dependency>
-            <groupId>com.mulesoft.muleesb.modules</groupId>
-            <artifactId>mule-module-batch-ee</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-spring-config</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.modus</groupId>
+			<artifactId>mule-connector-partner-manager</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.weave</groupId>
+			<artifactId>mule-plugin-weave</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.muleesb.modules</groupId>
+			<artifactId>mule-module-batch-ee</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 	<repositories>
 		<repository>
@@ -252,4 +254,11 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>Exchange</id>
+			<url>maven-facade.ue1.kprod.k8s.prod.msap.io</url>
+		</repository>
+	</distributionManagement>
 </project>

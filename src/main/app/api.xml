@@ -10,8 +10,8 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     <http:listener-config name="api-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <apikit:config name="api-config" raml="api.raml" consoleEnabled="false" doc:name="Router"/>
     <api-platform-gw:api apiName="Events API" version="1.0" flowRef="api-main" create="true" apikitRef="api-config" doc:name="API Autodiscovery"/>
+    <api-platform-gw:api apiName="Events API" version="2.0" flowRef="api-main" create="true" apikitRef="api-config" doc:name="API Autodiscovery"/>
     <mongo:config name="Mongo_DB" username="deb" password="deb" database="deb" host="ds151661.mlab.com:51661" doc:name="Mongo DB" />
-    <partner-manager:config name="Partner_Manager__Basic_Configuration" apiKey="1c7e04a17d3442abafd060953f785576" environmentId="533eb8d3e4b00e572676f485" doc:name="Partner Manager: Basic Configuration"/>
     <flow name="api-main">
         <http:listener config-ref="api-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
         <apikit:router config-ref="api-config" doc:name="APIkit Router"/>
@@ -24,7 +24,6 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     <flow name="get:/events:api-config">
         <mongo:find-documents config-ref="Mongo_DB" collection="events" doc:name="Mongo DB"/>
         <set-variable variableName="mongo" value="#[payload]" doc:name="Variable"/>
-        <partner-manager:track-document config-ref="Partner_Manager__Basic_Configuration" direction="INBOUND" doc:name="Partner Manager" partnerIdentifier="#[123456789]"/>
         <dw:transform-message doc:name="Transform Message">
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/json
